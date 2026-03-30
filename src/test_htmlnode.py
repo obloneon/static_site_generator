@@ -2,7 +2,7 @@ import unittest
 
 from htmlnode import HTMLNode, LeafNode, ParentNode
 
-class TestTextNode(unittest.TestCase):
+class TestHTMLNode(unittest.TestCase):
     def test_repr_html(self):
         node = HTMLNode()
         test_string = "HTMLNode(None, None, None, None)"
