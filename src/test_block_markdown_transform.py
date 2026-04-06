@@ -2,7 +2,7 @@ import unittest
 from block_markdown_transform import markdown_to_blocks, block_to_block_type, BlockType
 
 
-class TestMarkdownToHTML(unittest.TestCase):
+class TestMarkdownToBlock(unittest.TestCase):
     def test_markdown_to_blocks(self):
         md = """
 This is **bolded** paragraph
