@@ -4,6 +4,16 @@ from inline_markdown_transform import text_to_textnodes
 from textnode import text_node_to_html_node, TextNode, TextType
 
 
+def extract_title(markdown):
+    lines = markdown.split("\n")
+    for line in lines:
+        if line.startswith("# "):
+            header = line.strip("#")
+            header = header.strip(" ")
+            return header
+    raise Exception(f"No h1 found in:\n{markdown}")
+
+
 def markdown_to_html_node(markdown):
     blocks = markdown_to_blocks(markdown)
     children = []

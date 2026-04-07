@@ -1,5 +1,16 @@
 import unittest
-from markdown_to_html import markdown_to_html_node
+from markdown_to_html import markdown_to_html_node, extract_title
+
+
+class TestExtractTitle(unittest.TestCase):
+    def test_extract_title(self):
+        md = "# Hello"
+        self.assertEqual(extract_title(md), "Hello")
+
+    def test_extract_title_exception(self):
+         md = "Hello"
+         with self.assertRaises(Exception):
+            extract_title(md)       
 
 
 class TestMarkdownToHTML(unittest.TestCase):
