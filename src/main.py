@@ -5,7 +5,7 @@ from generate_page import generate_pages_recursive
 
 def main():
     copy_directory("static", "docs")
-    base_path = sys.argv[0]
+    base_path = sys.argv[1]
     if base_path == "":
         base_path = "/"
     content_path = "./content"
